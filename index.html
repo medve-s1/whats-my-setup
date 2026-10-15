@@ -165,6 +165,9 @@
               availableResolution: screen.availWidth + "x" + screen.availHeight,
               devicePixelRatio: window.devicePixelRatio,
               refreshRateHz: refreshHz,
+              orientation:
+                (screen.orientation && screen.orientation.type) ||
+                (screen.width >= screen.height ? "landscape" : "portrait"),
               colorDepth: screen.colorDepth,
             },
             viewport: {
